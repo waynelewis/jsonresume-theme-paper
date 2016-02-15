@@ -112,35 +112,6 @@
 			{{/location}}
 			{{/resume.basics}}
 
-
-			<!-- LANGUAGE -->
-			{{#if resume.languages.length}}
-			<section class="content">
-				<div class="row">
-					<div class="content-cat">
-						Languages
-					</div>
-					<div class="content-text">
-
-						{{#each resume.languages}}
-						<ul>
-
-							{{#if language}}
-							<li>{{language}}</li>
-							{{/if}}	
-
-							{{#if fluency}}
-							<li>{{fluency}}</li>
-							{{/if}}	
-
-						</ul>
-						{{/each}}
-
-					</div>
-				</div>
-			</section>
-			{{/if}}
-
 			<!-- SUMMARY -->
 			{{#resume.basics}}
 			<section class="content">
@@ -149,9 +120,9 @@
 						Summary
 					</div>
 					<div class="content-text work-listing">
-						{{#if summary}}
-						<p>{{summary}}</p>
-						{{/if}}
+						{{#summary}}
+						<p>{{.}}</p>
+						{{/summary}}
 					</div>
 				</div>
 			</section>
