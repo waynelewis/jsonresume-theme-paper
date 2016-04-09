@@ -90,11 +90,13 @@
 						{{/if}}
 
 						{{#if city}}
+						{{#if state}}
 						{{#if postalCode}}
 						<ul>
-							<li>Postal Code & City</li>
-							<li>{{postalCode}} {{city}}</li>
+							<li>City</li>
+							<li>{{city}} {{state}} {{postalCode}}</li>
 						</ul>
+						{{/if}}
 						{{/if}}
 						{{/if}}
 
@@ -183,9 +185,9 @@
 							<p>
 							{{/if}}
 							{{#if website}}
-							<strong>{{position}}</strong> at <strong><a href="{{website}}">{{company}}:</a></strong>
+							<strong>{{position}}</strong> at <strong><a href="{{website}}">{{company}}</a></strong>
 							{{else}}
-							<strong>{{position}}</strong> at <strong>{{company}}:</strong>
+							<strong>{{position}}</strong> at <strong>{{company}}</strong>
 							{{/if}}
 							</p>
 							{{/ifCond}}
