@@ -42,6 +42,7 @@
 		<div class="content-wrapper">
 
 			<!-- CONTACT -->
+			{{#ifCond email '||' phone}}
 			<section class="content">
 				<div class="row">
 					<div class="content-cat">
@@ -71,6 +72,7 @@
 					</div>
 				</div>
 			</section>
+			{{/ifCond}}
 
 			<!-- LOCATION -->
 			{{#location}}
@@ -116,6 +118,7 @@
 
 			<!-- SUMMARY -->
 			{{#resume.basics}}
+			{{#if summary}}
 			<section class="content">
 				<div class="row">
 					<div class="content-cat">
@@ -128,6 +131,7 @@
 					</div>
 				</div>
 			</section>
+			{{/if}}
 			{{/resume.basics}}
 
 
