@@ -388,10 +388,36 @@
 					</section>
 					{{/if}}
 
+					{{#if resume.memberships.length}}
+					<section class="content">
+						<div class="row">
+							<div class="content-cat">
+								Memberships
+							</div>
+							<div class="content-text skills-listing">
+
+								{{#foreach resume.memberships}}
+								<p>
+								<span class="name">
+									{{#if organization}}
+									<strong>
+										{{organization}}
+									</strong>
+									{{/if}}
+								</span>
+
+								{{#if type}}
+								{{type}}
+								{{/if}}
+								</p>
+								{{/foreach}}
+
+							</div>
+						</div>
+					</section>
+					{{/if}}
 				</div>
-
 			</article>
-
 		</div>
 		</body>
 		</html>
