@@ -428,19 +428,19 @@
 								<p>
 								<span class="name">
 									<strong>
-										{{name}}
+										{{name}}<br>
 									</strong>
 								</span>
-								</p>
 
 
-								<p>
 								{{#if publisher}}
-								{{publisher}}
+								{{#if releaseDate}}
+								{{publisher}}, {{releaseDate}}<br>
+								{{else}}
+								{{publisher}}<br>
 								{{/if}}
-								</p>
+								{{/if}}
 
-								<p>
 								{{#if primaryAuthor}}
 								{{#if coAuthors.length}}
 								<strong>
@@ -448,23 +448,21 @@
 								</strong>
 								{{else}}
 								<strong>
-									{{primaryAuthor}}
+									{{primaryAuthor}}<br>
 								</strong>
 								{{/if}}
 								{{/if}}
 
 								{{#if coAuthors.length}}
-								{{#commalist coAuthors}}{{.}}{{/commalist}}
+								{{#commalist coAuthors}}{{.}}{{/commalist}}<br>
 								{{/if}}
-								</p>
 
-								<p>
 								{{#if website}}
-								{{website}}
+								{{website}}<br>
 								{{/if}}
 								{{#if summary}}
 								{{summary}}
-								{{/if}}
+								{{/if}}<br>
 								</p>
 								{{/foreach}}
 							</div>
