@@ -171,7 +171,7 @@
 					<div class="row">
 						<div class="content-cat big-text">
 							{{#if $first}}
-							Work	Experience
+							Work Experience
 							{{/if}}
 
 							{{#if startDate}}
@@ -418,57 +418,66 @@
 					{{/if}}
 
 					{{#if resume.publications.length}}
+					{{#foreach resume.publications}}
+
+					{{#if $first}}
 					<section class="content">
-						<div class="row">
-							<div class="content-cat">
-								Publications
-							</div>
-							<div class="content-text skills-listing">
-								{{#foreach resume.publications}}
-								<p>
-								<span class="name">
+						{{else}}
+						<section class ="content publication-content"> 
+							{{/if}}
+
+							<div class="row">
+								<div class="content-cat big-text">
+									{{#if $first}}
+									Publications
+									{{/if}}
+								</div>
+
+								<div class="content-text publication-listing">
+									<p>
+									<span class="name">
+										<strong>
+											{{name}}<br>
+										</strong>
+									</span>
+
+
+									{{#if publisher}}
+									{{#if releaseDate}}
+									{{publisher}}, {{releaseDate}}<br>
+									{{else}}
+									{{publisher}}<br>
+									{{/if}}
+									{{/if}}
+
+									{{#if primaryAuthor}}
+									{{#if coAuthors.length}}
 									<strong>
-										{{name}}<br>
+										{{primaryAuthor}},
 									</strong>
-								</span>
+									{{else}}
+									<strong>
+										{{primaryAuthor}}<br>
+									</strong>
+									{{/if}}
+									{{/if}}
 
+									{{#if coAuthors.length}}
+									{{#commalist coAuthors}}{{.}}{{/commalist}}<br>
+									{{/if}}
 
-								{{#if publisher}}
-								{{#if releaseDate}}
-								{{publisher}}, {{releaseDate}}<br>
-								{{else}}
-								{{publisher}}<br>
-								{{/if}}
-								{{/if}}
-
-								{{#if primaryAuthor}}
-								{{#if coAuthors.length}}
-								<strong>
-									{{primaryAuthor}},
-								</strong>
-								{{else}}
-								<strong>
-									{{primaryAuthor}}<br>
-								</strong>
-								{{/if}}
-								{{/if}}
-
-								{{#if coAuthors.length}}
-								{{#commalist coAuthors}}{{.}}{{/commalist}}<br>
-								{{/if}}
-
-								{{#if website}}
-								{{website}}<br>
-								{{/if}}
-								{{#if summary}}
-								{{summary}}
-								{{/if}}<br>
-								</p>
-								{{/foreach}}
+									{{#if website}}
+									{{website}}<br>
+									{{/if}}
+									{{#if summary}}
+									{{summary}}<br>
+									{{/if}}
+									</p>
+								</div>
 							</div>
-						</div>
-					</section>
-					{{/if}}
+						</section>
+						{{/foreach}}
+						{{/if}}
 
 		</div>
 	</article>

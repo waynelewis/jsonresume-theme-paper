@@ -253,6 +253,34 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
   
 }
 
+.publication-listing p {
+  font-family: "Open Sans";
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.publication-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.publication-listing {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  padding-left:0.5em;
+  
+  border-left:1px solid #e0e0e0;
+  
+}
+
 .education-listing > .heading {
   font-weight:600;
   
@@ -278,6 +306,14 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 }
 
 section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+.publication-content {
+  padding-top: .75em;
+}
+
+publication.content > div > div.content-text {
   vertical-align: top;
 }
 
