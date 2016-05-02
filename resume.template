@@ -416,8 +416,64 @@
 						</div>
 					</section>
 					{{/if}}
-				</div>
-			</article>
+
+					{{#if resume.publications.length}}
+					<section class="content">
+						<div class="row">
+							<div class="content-cat">
+								Publications
+							</div>
+							<div class="content-text skills-listing">
+								{{#foreach resume.publications}}
+								<p>
+								<span class="name">
+									<strong>
+										{{name}}
+									</strong>
+								</span>
+								</p>
+
+
+								<p>
+								{{#if publisher}}
+								{{publisher}}
+								{{/if}}
+								</p>
+
+								<p>
+								{{#if primaryAuthor}}
+								{{#if coAuthors.length}}
+								<strong>
+									{{primaryAuthor}},
+								</strong>
+								{{else}}
+								<strong>
+									{{primaryAuthor}}
+								</strong>
+								{{/if}}
+								{{/if}}
+
+								{{#if coAuthors.length}}
+								{{#commalist coAuthors}}{{.}}{{/commalist}}
+								{{/if}}
+								</p>
+
+								<p>
+								{{#if website}}
+								{{website}}
+								{{/if}}
+								{{#if summary}}
+								{{summary}}
+								{{/if}}
+								</p>
+								{{/foreach}}
+							</div>
+						</div>
+					</section>
+					{{/if}}
+
 		</div>
-		</body>
-		</html>
+	</article>
+</div>
+</body>
+</html>
