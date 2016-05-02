@@ -263,8 +263,8 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
   margin-bottom: 0.45em;
 }
 
-div.content-text.publication-listing > p:nth-child(2) {
-  margin-top:0.25em;
+.publication-listing > p:nth-child(2) {
+  margin-top:0.0em;
 }
 
 .publication-listing {
