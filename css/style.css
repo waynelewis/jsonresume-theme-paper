@@ -331,3 +331,12 @@ div.content-text.skills-listing > p > {
   color:#212121;
 }
 
+div.content-text.other-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}

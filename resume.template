@@ -421,17 +421,20 @@
 					{{#if resume.other.length}}
 					{{#foreach resume.other}}
 					<section class="content">
-						<p>
 						<div class="row">
 							<div class="content-cat">
 								{{title}}
 							</div>
-							<div class="content-text skills-listing">
+							<div class="content-text other-listing">
+								<p>
 								{{content}}
+								</p>
 							</div>
 						</div>
 					</section>
+					{{/foreach}}
 					{{/if}}
+
 					{{#if resume.publications.length}}
 					{{#foreach resume.publications}}
 
@@ -453,9 +456,9 @@
 
 									{{#if primaryAuthor}}
 									{{#if coAuthors.length}}
-										{{primaryAuthor}},
+									{{primaryAuthor}},
 									{{else}}
-										{{primaryAuthor}}<br>
+									{{primaryAuthor}}<br>
 									{{/if}}
 									{{/if}}
 
