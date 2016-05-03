@@ -417,6 +417,21 @@
 					</section>
 					{{/if}}
 
+
+					{{#if resume.other.length}}
+					{{#foreach resume.other}}
+					<section class="content">
+						<p>
+						<div class="row">
+							<div class="content-cat">
+								{{title}}
+							</div>
+							<div class="content-text skills-listing">
+								{{content}}
+							</div>
+						</div>
+					</section>
+					{{/if}}
 					{{#if resume.publications.length}}
 					{{#foreach resume.publications}}
 
