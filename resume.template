@@ -435,35 +435,29 @@
 
 								<div class="content-text publication-listing">
 									<p>
-									<span class="name">
-										<strong>
-											{{name}}<br>
-										</strong>
-									</span>
-
-
-									{{#if publisher}}
-									{{#if releaseDate}}
-									{{publisher}}, {{releaseDate}}<br>
-									{{else}}
-									{{publisher}}<br>
-									{{/if}}
-									{{/if}}
 
 									{{#if primaryAuthor}}
 									{{#if coAuthors.length}}
-									<strong>
 										{{primaryAuthor}},
-									</strong>
 									{{else}}
-									<strong>
 										{{primaryAuthor}}<br>
-									</strong>
 									{{/if}}
 									{{/if}}
 
 									{{#if coAuthors.length}}
-									{{#commalist coAuthors}}{{.}}{{/commalist}}<br>
+									{{#if date}}
+									{{#commalist coAuthors}}{{.}}{{/commalist}}, {{date}}.
+									{{else}}
+									{{#commalist coAuthors}}{{.}}{{/commalist}}.
+									{{/if}}
+									{{/if}}
+
+									{{#if title}}
+									{{title}}.
+									{{/if}}
+
+									{{#if source}}
+									{{source}}.
 									{{/if}}
 
 									{{#if website}}
