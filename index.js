@@ -14,6 +14,17 @@ function render(resume) {
       if(options.inverse && !arr.length)
           return options.inverse(this);
 
+			function compare(a,b) {
+				if (a.index < b.index)
+					return -1;
+				else if (a.index > b.index)
+					return 1;
+				else
+					return 0;
+			}
+
+			arr.sort(compare);
+
       return arr.map(function(item,index) {
           item.$index = index;
           item.$first = index === 0;
