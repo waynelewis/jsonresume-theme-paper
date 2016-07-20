@@ -263,9 +263,11 @@
 								Education
 								{{/if}}
 
-								{{#if startDate}}
 								{{#if endDate}}
+								{{#if startDate}}
 								<p>{{startDate}} to {{endDate}}</p>
+								{{else}}
+								<p>{{endDate}}</p>
 								{{/if}}
 								{{/if}}
 
