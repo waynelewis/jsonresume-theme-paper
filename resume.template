@@ -182,19 +182,32 @@
 
 						</div>
 						<div class="content-text work-listing education-listing">
-							{{#ifCond company '&&' position}}
+							{{#if company}}
 							{{#if $first}}
 							<p style="margin-top:2.4em;">
 							{{else}}
 							<p>
 							{{/if}}
-							{{#if website}}
+							{{#ifCond website '&&' position}}
 							<strong>{{position}}</strong> at <strong><a href="{{website}}">{{company}}</a></strong>
-							{{else}}
-							<strong>{{position}}</strong> at <strong>{{company}}</strong>
-							{{/if}}
-							</p>
 							{{/ifCond}}
+							{{#if position}}
+							{{#unless website}}
+							<strong>{{position}}</strong> at <strong>{{company}}</strong>
+							{{/unless}}
+							{{/if}}
+							{{#if website}}
+							{{#unless position}}
+							<strong><strong><a href="{{website}}">{{company}}</a></strong>
+							{{/unless}}
+							{{/if}}
+							{{#unless website}}
+							{{#unless position}}
+							<strong>{{company}}</strong>
+							{{/unless}}
+							{{/unless}}
+							</p>
+							{{/if}}
 
 							{{#if summary}}
 							<p>{{summary}}</p>
